@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolo de Descarga</title>
+    <title>Terminal de Archivos - Acceso Autorizado</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1 class="glitch">SISTEMA DE ACCESO</h1>
-        <p>Haz clic abajo para obtener el archivo encriptado.</p>
+        <h1 class="glitch">SISTEMA DE ARCHIVOS</h1>
+        <p>Selecciona el paquete de datos que deseas extraer.</p>
         
-        <!-- El atributo 'download' fuerza la descarga en lugar de abrir la imagen -->
-        <a href="assets/imagen.jpg" download="mi-imagen-descargada" class="download-btn" id="btnDescarga">
-            DESCARGAR IMAGEN
-        </a>
+        <div class="download-grid">
+            <!-- Archivos con nombres cortos -->
+            <a href="assets/FOTO.jpg" download class="download-btn">FOTO 1</a>
+            <a href="assets/FOTO2.jpg" download class="download-btn">FOTO 2</a>
+            <a href="assets/FOTO3.jpg" download class="download-btn">FOTO 3</a>
+            
+            <!-- Archivos de WhatsApp (Asegúrate de que el nombre sea IDÉNTICO al del archivo) -->
+            <a href="assets/WhatsApp Image 2026-03-10 at 1.52.53 PM.jpeg" download class="download-btn">DATA_01</a>
+            <a href="assets/WhatsApp Image 2026-03-20 at 11.43.05 AM.jpeg" download class="download-btn">DATA_02</a>
+            <a href="assets/WhatsApp Image 2026-03-20 at 11.43.05 AM (1).jpeg" download class="download-btn">DATA_03</a>
+            <a href="assets/WhatsApp Image 2026-03-20 at 11.43.05 AM (2).jpeg" download class="download-btn">DATA_04</a>
+        </div>
     </div>
 
     <script src="script.js"></script>
