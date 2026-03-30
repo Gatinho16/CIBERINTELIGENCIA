@@ -1,3 +1,6 @@
+/* =========================================
+   CONFIGURACIÓN HACKER COMPLETA
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 * {
@@ -7,17 +10,18 @@
 }
 
 body {
-    background-color: #050505;
-    color: #00ff41;
+    background-color: #050505; /* Fondo Negro */
+    color: #00ff41; /* Verde Matrix */
     font-family: 'Fira Code', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    overflow-x: hidden;
 }
 
-/* Efecto de líneas de escaneo */
+/* Efecto de líneas de escaneo en toda la pantalla */
 body::before {
     content: " ";
     position: fixed;
@@ -32,6 +36,7 @@ body::before {
     z-index: 10;
 }
 
+/* Contenedor Principal */
 .container {
     width: 100%;
     max-width: 900px;
@@ -44,24 +49,41 @@ body::before {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     letter-spacing: 4px;
     margin-bottom: 10px;
     text-shadow: 0 0 10px #00ff41;
+    text-transform: uppercase;
 }
 
-p {
-    color: #888;
+/* Mensaje de Advertencia "PILAS" */
+.warning {
+    color: #ff3e3e; /* Rojo Neón */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 40px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    display: block;
+    animation: blink 0.8s infinite; /* Parpadeo rápido */
+    text-shadow: 0 0 10px #ff3e3e;
 }
 
+/* Animación de Parpadeo */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
+
+/* Cuadrícula de botones */
 .download-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
 }
 
+/* Botones de Descarga */
 .download-btn {
     position: relative;
     display: flex;
@@ -72,34 +94,4 @@ p {
     background: transparent;
     color: #00ff41;
     text-decoration: none;
-    border: 1px solid #00ff41;
-    font-weight: bold;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.download-btn::before {
-    content: "▼";
-    margin-bottom: 8px;
-    font-size: 1.2rem;
-}
-
-.download-btn:hover {
-    background: #00ff41;
-    color: #050505;
-    box-shadow: 0 0 20px #00ff41;
-    transform: translateY(-3px);
-}
-
-.download-btn:active {
-    transform: scale(0.95);
-}
-
-@media (max-width: 600px) {
-    .container { padding: 20px; }
-    h1 { font-size: 1.5rem; }
-}
-.download-btn:active {
-    transform: scale(0.95); /* Se encoge al hacer clic */
-}
+    border: 1px solid #0
